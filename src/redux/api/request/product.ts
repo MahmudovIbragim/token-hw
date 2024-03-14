@@ -26,6 +26,7 @@ const product = index.injectEndpoints({
         url: `products/${id}`,
         method: "DELETE",
       }),
+      invalidatesTags: ["user"],
     }),
   }),
 });
