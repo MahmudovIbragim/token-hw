@@ -3,7 +3,7 @@ import { Todo } from "./typed";
 
 const api = index.injectEndpoints({
   endpoints: (builder) => ({
-    getRequest: builder.query<Todo.GetRequest, Todo.GetResponse>({
+    getRequest: builder.query<Todo.GetResponse, Todo.GetRequest>({
       query: () => ({
         url: "users",
         method: "GET",
