@@ -4,6 +4,7 @@ import { useState } from "react";
 import scss from "./Login.module.scss";
 import { usePostLoginRequestMutation } from "../../../redux/api/request";
 import { useNavigate } from "react-router";
+import { Button, TextField } from "@mui/material";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -29,19 +30,25 @@ const Login = () => {
       Login
       <div className="container">
         <div className={scss.Content}>
-          <input
-            type="text"
+          <TextField
+            id="outlined-basic"
+            label="Outlined"
+            variant="outlined"
             value={email}
             placeholder="email"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <input
-            type="text"
+          <TextField
+            id="outlined-basic"
+            label="Outlined"
+            variant="outlined"
             placeholder="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={handleAddUser}>Войти</button>
+          <Button onClick={handleAddUser} variant="outlined">
+            Outlined
+          </Button>
         </div>
       </div>
     </div>
